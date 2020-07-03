@@ -3,7 +3,7 @@
     <div>
       <div class="row justify-content-center">
         <div class="col-12">
-          <el-carousel class="container" height="500px" >
+          <el-carousel class="container" >
             <el-carousel-item>
               <img class="d-block" src="images/2.jpg">
             </el-carousel-item>
