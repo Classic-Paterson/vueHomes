@@ -17,6 +17,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <link rel="manifest" href="manifest.json">
+
     <meta charset="utf-8">
     <link rel="icon" type="image/png" sizes="96x96" href="<%= webpackConfig.output.publicPath %>favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -27,6 +30,58 @@
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script>
+      if (!navigator.serviceWorker.controller) {
+          navigator.serviceWorker.register("/sw.js").then(function(reg) {
+              console.log("Service worker has been registered for scope: " + reg.scope);
+          });
+      }
+     </script>
+
+<script>
+
+  navigator.serviceWorker.register('pwabuilder-sw.js');
+
+  function testNotification() {
+    if (Notification.permission === "granted") {
+      generateNotification();
+    }
+
+    else if (Notification.permission !== "denied") {
+      Notification.requestPermission().then(function (permission) {
+        if (permission === "granted") {
+          generateNotification();
+        }
+      });
+    }
+  }
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+  function generateNotification() {
+
+  var notificationList = [
+  "The price for 87 Conway Road has been reduced!",
+  "The LIM for 87 Conway Road has been added!",
+  "If you lived at 87 Conway Road you'd be home by now!",
+  "The auction for 87 Conway Road is next week.",
+  ]
+
+  navigator.serviceWorker.ready.then(function(registration) {
+      registration.showNotification('87 Conway Road, Paengaroa', {
+        body: notificationList[getRandomInt(4)],
+        icon: 'assets/images/1.jpg',
+        vibrate: [200, 100, 200, 100, 200, 100, 200],
+        tag: notificationList[getRandomInt(4)]
+      });
+    });
+    //var notification = new Notification(notificationList[getRandomInt(4)]);
+  }
+
+</script>
+
   </head>
   <body class="sidebar-collapse">
     <noscript>

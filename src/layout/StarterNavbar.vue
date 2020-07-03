@@ -56,7 +56,7 @@
     </template>    
     <template slot="navbar-menu">
       <li class="nav-item">
-        <a class="nav-link btn" style="background-color: #3f97a6; color:white;">
+        <a id="notificationButton" onclick="testNotification()" class="nav-link btn" style="background-color: #3f97a6; color:white;">
           <p>Notification</p>
         </a>
       </li>
