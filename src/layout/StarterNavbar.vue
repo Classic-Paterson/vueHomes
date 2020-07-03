@@ -1,8 +1,13 @@
 <template>
-  <navbar position="fixed" type="primary" menu-classes="ml-auto">
+  <navbar
+    position="fixed"
+    type="primary"
+    :transparent="transparent"
+    :color-on-scroll="colorOnScroll"
+    menu-classes="ml-auto"
+  >
     <template>
-      <router-link v-popover:popover1 class="navbar-brand" to="/presentation">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="25px" fill="white" viewBox="0 0 375.7 58.2" style="enable-background:new 0 0 375.7 58.2;" xml:space="preserve">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="20px" fill="white" viewBox="0 0 375.7 58.2" style="enable-background:new 0 0 375.7 58.2;" xml:space="preserve">
           <g>
             <g>
               <g class="words">
@@ -48,23 +53,11 @@
             </g>
           </g>
       </svg>
-      </router-link>
-      <el-popover
-        ref="popover1"
-        popper-class="popover"
-        placement="bottom"
-        width="300"
-        trigger="hover">
-        <div class="popover-body">
-          87 Conway Road, Paengaroa, Western Bay of Plenty, Tauranga
-        </div>
-      </el-popover>
     </template>    
     <template slot="navbar-menu">
       <li class="nav-item">
-        <a class="nav-link btn notifications-button">
-          <!-- <i class="now-ui-icons arrows-1_share-66"></i> -->
-          <p>Test Notifications</p>
+        <a class="nav-link btn" style="background-color: #3f97a6; color:white;">
+          <p>Notification</p>
         </a>
       </li>
     </template>
@@ -78,10 +71,12 @@ import { Popover } from 'element-ui';
 
 export default {
   name: 'main-navbar',
+    props: {
+    transparent: Boolean,
+    colorOnScroll: Number
+  },
   components: {
-    //DropDown,
     Navbar,
-    //NavLink,
     [Popover.name]: Popover
   }
 };
@@ -89,19 +84,4 @@ export default {
 </script>
 
 <style scoped>
-
-.notifications-button {
-    background-color: #3f97a6;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 2px;
-    transition: background-color .2s,color .2s;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 15px;
-    position: absolute;
-    top: 10px;
-    right: 11px;
-    outline: none;
-}
 </style>

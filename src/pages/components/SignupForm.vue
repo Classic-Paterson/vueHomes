@@ -7,8 +7,8 @@
       <div class="row">
         <card class="card-signup" header-classes="text-center" color="orange">
           <template slot="header">
-            <h3 class="card-title title-up">Sign Up</h3>
-            <div class="social-line">
+            <h3 class="card-title title-up">Contact Us</h3>
+            <!-- <div class="social-line">
               <a
                 href="#pablo"
                 class="btn btn-neutral btn-facebook btn-icon btn-round"
@@ -27,7 +27,7 @@
               >
                 <i class="fab fa-google-plus"></i>
               </a>
-            </div>
+            </div> -->
           </template>
           <template>
             <fg-input
@@ -52,17 +52,9 @@
             </fg-input>
           </template>
           <div class="card-footer text-center">
-            <n-button type="neutral" round size="lg">Get Started</n-button>
+            <n-button type="neutral" round size="lg">Book an appointment</n-button>
           </div>
         </card>
-      </div>
-      <div class="col text-center">
-        <router-link
-          to="/login"
-          class="btn btn-simple btn-round btn-white btn-lg"
-        >
-          View Login Page
-        </router-link>
       </div>
     </div>
   </div>

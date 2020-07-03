@@ -309,6 +309,10 @@
 }
 
 @media screen and (min-width: 991px) and (max-width: 1200px){
+    .el-carousel__container {
+        position: relative;
+        height: 500px;
+    }
     .section-images{
         .hero-images-container-1{
             right: 9%;
@@ -323,6 +327,10 @@
 }
 
 @media screen and (max-width: 768px){
+    .el-carousel__container {
+        position: relative;
+        height: 300px;
+    }
     .section-images{
         height: 300px;
         max-height: 300px;
@@ -352,6 +360,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .el-carousel__container {
+        position: relative;
+        height: 500px;
+    }
     .section-images{
         .hero-images-container-1{
             top: 51%;
@@ -397,6 +409,10 @@ and ( orientation : portrait){
 }
 
 @media screen and (max-width: 580px) {
+    .el-carousel__container {
+        position: relative;
+        height: 300px;
+    }
     .alert{
         button.close{
             position: absolute;

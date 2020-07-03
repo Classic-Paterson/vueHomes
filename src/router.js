@@ -4,7 +4,7 @@ import Index from './pages/Index.vue';
 import Landing from './pages/Landing.vue';
 import Login from './pages/Login.vue';
 import Profile from './pages/Profile.vue';
-import MainNavbar from './layout/MainNavbar.vue';
+import MainNavbar from './layout/starterNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
 
 Vue.use(Router);

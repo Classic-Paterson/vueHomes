@@ -1,11 +1,12 @@
 // display flex was causing errors
-.carousel-item-next,
+// x-item-next,
 .carousel-item-prev,
 .carousel-item.active{
     display: block;
 }
 
 .carousel{
+    margin-top:40px;
     .carousel-inner{
         box-shadow: $box-shadow-raised;
         border-radius: $border-radius-small;
